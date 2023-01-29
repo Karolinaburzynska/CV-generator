@@ -19,7 +19,7 @@
                 <li><a href= '<c:url value="/about"/>' class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
                 <li><a href='<c:url value="/education"/>' class="nav-link scrollto"><i class="bx bx-book icon"></i> <span>Education</span></a></li>
                 <li><a href='<c:url value="/experience"/>' class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Experience</span></a></li>
-                <li><a href='<c:url value="/skills"/>' class="nav-link scrollto"><i class="bx bx-keyboard icon"></i> <span>Skills</span></a></li>
+                <li><a href='<c:url value="/skills"/>' class="nav-link scrollto"><i class="bi bi-pencil-square"></i> <span>Skills</span></a></li>
                 <li><a href='<c:url value="/contact"/>' class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
                 <li><a href='<c:url value="/logout"/>' class="nav-link scrollto"><i class="bx bx-log-out"></i> <span>Log out</span></a></li>
             </ul>
