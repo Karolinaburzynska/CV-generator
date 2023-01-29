@@ -1,8 +1,6 @@
 package com.example.projectcv.controller;
 
-import com.example.projectcv.model.Education;
 import com.example.projectcv.model.Experience;
-import com.example.projectcv.service.EducationService;
 import com.example.projectcv.service.ExperienceService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
