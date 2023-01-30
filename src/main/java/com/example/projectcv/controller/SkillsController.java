@@ -4,6 +4,7 @@ import com.example.projectcv.service.SkillService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.view.RedirectView;
 
@@ -29,6 +30,12 @@ private final SkillService service;
     @PostMapping("/skills")
     public RedirectView postSkills(Skill skill){
         service.addSkill(skill);
+        return new RedirectView("/skills");
+    }
+
+    @PostMapping("/skills/{id}")
+    public RedirectView deleteSkills(@PathVariable("id") Long id){
+        service.deleteSkill(id);
         return new RedirectView("/skills");
     }
 

@@ -23,6 +23,10 @@ public class SkillService {
         return skillRepository.findAll();
     }
 
+    public void deleteSkill (Long id){
+        skillRepository.deleteById(id);
+    }
+
 
 
 

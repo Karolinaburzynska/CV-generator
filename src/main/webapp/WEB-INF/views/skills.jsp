@@ -23,66 +23,79 @@
 
             <div class="section-title">
                 <h2>Skills</h2>
-                <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                    consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-                    fugiat sit in iste officiis commodi quidem hic quas.</p>
             </div>
 
             <div class="row skills-content">
+                <c:forEach items="${skill}" var="title">
+                    <div class="col-lg-9" data-aos="fade-up">
 
-                <div class="col-lg-8" data-aos="fade-up">
 
-                    <c:forEach items="${skill}" var="title">
-                    <div class="progress">
-                        <span class="skill">${title.nameSkill} <i class="val">${title.percent} % </i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow=${title.percent} aria-valuemin="0"
-                                 aria-valuemax="100"></div>
+                        <div class="progress">
+                            <span class="skill">${title.nameSkill} <i class="val">${title.percent} % </i></span>
+                            <div class="progress-bar-wrap">
+                                <div class="progress-bar" role="progressbar"
+                                     aria-valuenow=${title.percent} aria-valuemin="0"
+                                     aria-valuemax="100"></div>
+                            </div>
                         </div>
                     </div>
 
-                    </c:forEach>
+                    <security:authorize access="hasAnyRole('ADMIN')">
+                        <div class="col-lg-2" data-aos="fade-up">
 
-                </div>
+                            <div class="progress">
+                                <div class="col-lg-2" data-aos="fade-up">
+                                    <form method="post" action='<c:url value="/skills/${title.id}" />'>
+                                        <input class="btn btn-danger pull-left" type="submit" value="Delete skill"
+                                               id="searchButton">
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                    </security:authorize>
+                </c:forEach>
+
 
             </div>
 
         </div>
     </section><!-- End Skills Section -->
-<security:authorize access="hasAnyRole('ADMIN')">
-    <form method="post" action='<c:url value="/skills"/> '>
-        <div class="row">
+    <security:authorize access="hasAnyRole('ADMIN')">
+        <form method="post" action='<c:url value="/skills"/> '>
+            <div class="row">
 
-            <div class="col-xl-12 col-md-12 mb-12">
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
+                <div class="col-xl-12 col-md-12 mb-12">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
 
-                        <div class="form-group row">
-                            <label class="col-2 col-form-label">Skill</label>
-                            <div class="col-10">
-                                <input class="form-control"  type="text" name="nameSkill" placeholder="enter the skill">
+                            <div class="form-group row">
+                                <label class="col-2 col-form-label">Skill</label>
+                                <div class="col-10">
+                                    <input class="form-control" type="text" name="nameSkill"
+                                           placeholder="enter the skill">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-2 col-form-label">%</label>
-                            <div class="col-10">
-                                <input class="form-control"  type="number" name="percent" placeholder="0-100">
+                            <div class="form-group row">
+                                <label class="col-2 col-form-label">%</label>
+                                <div class="col-10">
+                                    <input class="form-control" type="number" name="percent" placeholder="0-100">
+                                </div>
                             </div>
-                        </div>
 
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <input class="btn btn-success pull-left" type="submit" value="Add skill" id="searchButton"/>
+            <input class="btn btn-success pull-left" type="submit" value="Add skill" id="searchButton"/>
 
-        <div class="card-header py-3">
+            <div class="card-header py-3">
 
 
-        </div>
+            </div>
 
-    </form>
-</security:authorize>
+        </form>
+    </security:authorize>
 
 </main><!-- End #main -->
 
