@@ -23,5 +23,9 @@ public class EducationService {
         return educationRepository.findAll();
     }
 
+    public void deleteEducation (Long id){
+        educationRepository.deleteById(id);
+    }
+
 
 }
