@@ -29,7 +29,7 @@ public class AboutController {
     @GetMapping("/editAbout")
     public String getEditPerson (Model model){
         List<About> aboutList = service.getAboutList();
-        model.addAttribute("editAbout", aboutList);
+        model.addAttribute("/editAbout", aboutList);
         return "/editAbout";
     }
 

@@ -5,6 +5,7 @@ import com.example.projectcv.service.EducationService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.view.RedirectView;
 
@@ -29,6 +30,12 @@ public class EducationController {
     @PostMapping("/education")
     public RedirectView postEducation(Education education ){
         service.addEducation(education);
+        return new RedirectView("/education");
+    }
+
+    @PostMapping("/education/{id}")
+    public RedirectView deleteEducation(@PathVariable("id") Long id){
+        service.deleteEducation(id);
         return new RedirectView("/education");
     }
 
