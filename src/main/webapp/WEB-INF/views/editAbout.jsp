@@ -32,10 +32,6 @@
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
                                 <div class="form-group row">
-                                    <label class="col-2 col-form-label">Birthday:</label>
-                                    <div class="col-10">
-                                        <input class="form-control" name="birthday" type="date"/>
-                                    </div>
 
                                     <div class="form-group row">
                                         <label class="col-2 col-form-label">Age</label>
@@ -63,13 +59,6 @@
                                         <div class="col-10">
                                             <input class="form-control" name="city" type="text"
                                                    placeholder="city">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-2 col-form-label">Freelance</label>
-                                        <div class="col-10">
-                                            <input class="form-control" name="freelance" type="text"
-                                                   placeholder="freelance">
                                         </div>
                                     </div>
                                     <div class="form-group row">

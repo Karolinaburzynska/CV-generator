@@ -24,26 +24,23 @@
 
             <div class="row">
                 <div class="col-lg-4" data-aos="fade-right">
-                    <img src="resources/img/profile-img.jpeg" class="img-fluid" alt="">
+                    <img src="resources\img\business-photo.jpg" class="img-fluid" alt="">
                 </div>
 
                 <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
                     <h3>Junior Java Developer</h3>
-                    <p class="fst-italic">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore
-                        magna aliqua.
-                    </p>
-<c:forEach items="${about}" var="title">
+
+                    <c:forEach items="${about}" var="title">
                     <div class="row">
                         <div class="col-lg-6">
                             <ul>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong>
-                                    <span>${title.birthday}</span></li>
+
                                 <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong>
                                     <span>${title.phone}</span></li>
                                 <li><i class="bi bi-chevron-right"></i> <strong>City:</strong>
                                     <span>${title.city}</span></li>
+                                <li><i class="bi bi-chevron-right"></i> <strong>Description:</strong>
+                                    <span>${title.description}</span></li>
                             </ul>
                         </div>
                         <div class="col-lg-6">
@@ -51,14 +48,11 @@
                                 <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>${title.age}</span></li>
                                 <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
                                     <span>${title.email}</span></li>
-                                <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong>
-                                    <span>${title.freelance}</span></li>
+
                             </ul>
                         </div>
                     </div>
-                    <p>
-                            ${title.description}
-                    </p>
+
                     <div>
                         <a href='<c:url value="/editAbout"/>' class="text-center">
                             <button type="submit">Edit</button>
