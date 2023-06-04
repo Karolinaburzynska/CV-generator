@@ -11,7 +11,7 @@
 * Bootstrap
 
 ## Możliwości programu i główne funkcjonalności
-Aplikacja podsiad dwa konta. Pierwsze konto należy do administratora, natomiast drugie do użytkownika. Administrator ma możliwość edycji, dodawania oraz usuwania danych. Konto użytkownika ma możliwość tylko odczytu informacji wprowdzonych przez administratora oraz wysyłki wiadomości w sekcji "contact".
+Aplikacja posiada dwa konta. Pierwsze konto należy do administratora, natomiast drugie do użytkownika. Administrator ma możliwość edycji, dodawania oraz usuwania danych. Konto użytkownika ma możliwość tylko odczytu informacji wprowadzonych przez administratora oraz wysyłki wiadomości w sekcji "contact".
 
 #### 1.Logowanie do panelu administratora oraz edycja danych w sekcji "about me":
 <img src="https://github.com/Karolinaburzynska/-readme_images_repository/blob/main/sign%20in%20and%20about%20me.gif" width="600"/>
